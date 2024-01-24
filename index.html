@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IRIAMバナー作成ツール</title>
+
+        <!-- Materialize CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <link rel="stylesheet" href="/css/colors.css">
+        <link rel="stylesheet" href="/css/texts.css">
+
+        <script src="/js/texts.js"></script>
+        <script src="/js/generator.js"></script>
+    </head>
+    <body class="main">
+        <div class="container">
+            <div><h1>IRIAMバナー</h1><h1>作成ツール</h1></div>
+            <p>コメント欄の縦幅いっぱいに埋め尽くすような大きなメッセージバナーを作成することができます。<br>
+                荒らし行為に繋がるような利用はしないでください。<br>絵文字ではなく記号を使った場合は正しく動かない場合があります。</p>
+            <div>
+                <div class="row">
+                    <div class="col s6">
+                        <label for="base-emoji">「地」部分の絵文字</label>
+                        <input id="base-emoji" type="text" value="🤍">
+                    </div>
+                    <div class="col s6">
+                        <label for="text-emoji">文字部分の絵文字</label>
+                        <input id="text-emoji" type="text" value="💗">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="message">出力したい言葉</label>
+                        <input id="message" type="text" value="LOVE">
+                        <p>アルファベット・数字以外は無視されます</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn-large waves-effect" onclick="refreshOutputArea();">メッセージバナーを作成する</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="output">生成結果</label>
+                        <textarea name="output" id="output" cols="27"
+                            rows="7" style="height: fit-content; white-space: nowrap; overflow-x: auto;"></textarea>
+                            <p id="lengthWarn" style="color: red; display: none;">横幅が25文字を超えています。このままでは使えません</p>
+                            <p>あとは好みなのでいい感じに修正して使ってください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
