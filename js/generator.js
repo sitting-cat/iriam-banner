@@ -30,7 +30,7 @@ function refreshOutputArea() {
     let result = generateTextBanner(base, text, message)
 
     document.getElementById("output").value =
-        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n" + result.join("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n.");
+        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n.");
 
     console.log(result[0].length);
     if (result[0].length > 25 * 2) {
