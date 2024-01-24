@@ -36,9 +36,10 @@ function refreshOutputArea() {
     } else {
         document.getElementById("lengthWarn").style.display = "none";
         fill = "　".repeat(26 - result[0].length / 2);
+        console.log(26 - result[0].length / 2);
     }
 
     document.getElementById("output").value =
-        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join("\n.");
+        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join(fill + "\n.");
 
 }
