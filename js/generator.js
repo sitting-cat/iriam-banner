@@ -29,13 +29,16 @@ function refreshOutputArea() {
 
     let result = generateTextBanner(base, text, message)
 
-    document.getElementById("output").value =
-        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n.");
-
     console.log(result[0].length);
+    let fill = "";
     if (result[0].length > 25 * 2) {
         document.getElementById("lengthWarn").style.display = "block";
     } else {
         document.getElementById("lengthWarn").style.display = "none";
+        fill = "　".repeat(26 - result[0].length / 2);
     }
+
+    document.getElementById("output").value =
+        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join("\n.");
+
 }
