@@ -35,8 +35,7 @@ function refreshOutputArea() {
         document.getElementById("lengthWarn").style.display = "block";
     } else {
         document.getElementById("lengthWarn").style.display = "none";
-        fill = "　".repeat(26 - result[0].length / 2);
-        console.log(26 - result[0].length / 2);
+        fill = "　".repeat(29 - result[0].length / 2);
     }
 
     document.getElementById("output").value =
