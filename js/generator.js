@@ -31,14 +31,14 @@ function refreshOutputArea() {
 
     console.log(result[0].length);
     let fill = "";
-    if (result[0].length > 25 * 2) {
+    if (result[0].length > 29 * 2) {
         document.getElementById("lengthWarn").style.display = "block";
     } else {
         document.getElementById("lengthWarn").style.display = "none";
-        fill = "　".repeat(35 - result[0].length / 2);
+        fill = "　".repeat(29 - result[0].length / 2);
     }
 
     document.getElementById("output").value =
-        ".　　　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join(fill + "\n.");
+        ".　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join(fill + "\n.");
 
 }
