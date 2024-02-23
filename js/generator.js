@@ -39,6 +39,6 @@ function refreshOutputArea() {
     }
 
     document.getElementById("output").value =
-        ".　　　　　　　　　　　　　　　　　　　　　　　　　\n." + result.join(fill + "\n.");
+        ".　　　　　　　　　　　　　　　　　　　　　\n." + result.join(fill + "\n.");
 
 }
