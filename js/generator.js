@@ -31,11 +31,11 @@ function refreshOutputArea() {
 
     console.log(result[0].length);
     let fill = "";
-    if (result[0].length > 29 * 2) {
+    if (result[0].length > 30 * 2) {
         document.getElementById("lengthWarn").style.display = "block";
     } else {
         document.getElementById("lengthWarn").style.display = "none";
-        fill = "　".repeat(29 - result[0].length / 2);
+        fill = "　".repeat(30 - result[0].length / 2);
     }
 
     document.getElementById("output").value =
